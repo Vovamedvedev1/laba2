@@ -62,7 +62,7 @@ class Matrix():
                 if abs(A[k][i]) > max_value:
                     max_value = abs(A[k][i])
                     leader_index = k
-            if abs(A[leader_index][i]) < 10**(-10):
+            if abs(A[leader_index][i]) < 10**(-15):
                 raise ArithmeticError("Матрица вырожденная")
             if leader_index != i:
                 A[i], A[leader_index] = A[leader_index], A[i]
