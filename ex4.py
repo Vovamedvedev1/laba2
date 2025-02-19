@@ -56,7 +56,7 @@ class Student:
         if abs(self.sr_znach() - other.sr_znach()) > 10**(-10):
             return f"{self.FIO} и {other.FIO} имеют разный средний балл"
         else:
-            if self.get_otklonenie() == other.get_otklonenie():
+            if abs(self.get_otklonenie()-other.get_otklonenie()) < 10**(-10):
                 return f"{self.FIO} и {other.FIO} имеют одинаковую степень разброса"
             elif self.get_otklonenie() > other.get_otklonenie():
                 return f"{self.FIO} имеет большую степень разброса, чем {other.FIO}"
